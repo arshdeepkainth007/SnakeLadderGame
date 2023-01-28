@@ -19,8 +19,7 @@
 #### 6. If the player reaches at the mouth of a snake, it retreats to the snake's tail (ex. 87 -> 36)
 
 ## APIs:
-### We have the following api(s):
-#### 1. Initiate a game
+### 1. Initiate a game
 ```
 curl --location --request POST 'http://127.0.0.1:8000/games' \
 --header 'Content-Type: application/json' \
@@ -29,7 +28,8 @@ curl --location --request POST 'http://127.0.0.1:8000/games' \
     "P2Name": "Vikram"
 }'
 ```
-This api initiates a game between `P1Name` and `P2Name`, the response provides with `GameID` that is used to play the game.
+#### This api initiates a game between `P1Name` and `P2Name`, the response provides with `GameID` that is used to play the game.
+#### Sample response:
 ```
 {
     "data": {
@@ -45,7 +45,7 @@ This api initiates a game between `P1Name` and `P2Name`, the response provides w
 }
 ```
 
-#### 2. Play the game
+### 2. Play the game
 ```
 curl --location --request PUT 'http://127.0.0.1:8000/games/4/'
 ```
@@ -104,7 +104,7 @@ curl --location --request PUT 'http://127.0.0.1:8000/games/4/'
     }
 ```
 
-If we try to use the same api again to play turn at a game that's completed, we get the following response.
+#### If we try to use the same api again to play turn at a game that's completed, we get the following response.
 ```
 {
         "data": null,
@@ -112,3 +112,5 @@ If we try to use the same api again to play turn at a game that's completed, we 
     }
 ]
 ```
+#### All the feedback is welcomed.
+## Thank You
