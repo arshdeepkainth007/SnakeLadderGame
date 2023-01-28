@@ -8,9 +8,9 @@
 #### Postman for api testing
 #### Github for source control
 
-## Rules of Game:
-### We have the board as shown below:
+## Game Board
 ![board_image](https://user-images.githubusercontent.com/38393402/215291182-3f830820-f793-41bd-912f-6b1deab54e1b.png)
+## Rules of the Game
 #### 1. Each Player starts at 0
 #### 2. The quickest one to reach 100 wins
 #### 3. Each Player gets alternate turns of throwing dice (1 to 6)
@@ -18,9 +18,9 @@
 #### 5. If the player reaches at the bottom of a ladder, it advances to the ladder's top (ex. 28 -> 84)
 #### 6. If the player reaches at the mouth of a snake, it retreats to the snake's tail (ex. 87 -> 36)
 
-# APIs:
+## APIs:
 ### We have the following api(s):
-#### 1. Start a game
+#### 1. Initiate a game
 ```
 curl --location --request POST 'http://127.0.0.1:8000/games' \
 --header 'Content-Type: application/json' \
@@ -45,7 +45,7 @@ This api initiates a game between `P1Name` and `P2Name`, the response provides w
 }
 ```
 
-#### 1. Play the game
+#### 2. Play the game
 ```
 curl --location --request PUT 'http://127.0.0.1:8000/games/4/'
 ```
