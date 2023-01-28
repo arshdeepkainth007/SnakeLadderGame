@@ -2,16 +2,25 @@ from django.db import models
 
 # Create your models here.
 
-WINNER = {
-    ("0", "Pending"),
-    ("1", "Player1"),
-    ("2", "Player2")
-}
-
 PLAYERS = {
     ("0", "None"),
     ("1", "Player1"),
     ("2", "Player2")
+}
+
+PLAYERS_POSITION_FIELDS = {
+    "1": "P1Pos",
+    "2": "P2Pos"
+}
+
+PLAYERS_NAME_FIELDS = {
+    "1": "P1Name",
+    "2": "P2Name"
+}
+
+PLAYERS_SWITCH = {
+    "1": "2",
+    "2": "1"
 }
 
 LADDERS = {
@@ -38,10 +47,10 @@ SNAKES = {
 
 class Game(models.Model):
     GameID = models.AutoField(primary_key=True)
-    P1Name = models.CharField(default="player_1")
-    P2Name = models.CharField(default="player_2")
-    Winner = models.CharField(max_length=1, choices=WINNER, default='0')
-    CurrPlayer = models.CharField(max_length=1, choices=PLAYERS, default='1')
+    P1Name = models.CharField(max_length=256, default="player_1")
+    P2Name = models.CharField(max_length=256, default="player_2")
+    Winner = models.CharField(max_length=1, choices=PLAYERS, default='0')
+    CurrPlayer = models.CharField(max_length=256, choices=PLAYERS, default='1')
     P1Pos = models.IntegerField(default=0)
     P2Pos = models.IntegerField(default=0)
 
