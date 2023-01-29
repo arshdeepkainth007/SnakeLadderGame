@@ -112,5 +112,8 @@ curl --location --request PUT 'http://127.0.0.1:8000/games/4/'
     }
 ]
 ```
+
+#### video explaining the code:
+https://drive.google.com/file/d/1DEqK1xY49rkPgqAELvvf0eWPFECXSXwq/view?usp=share_link
 #### All the feedback is welcomed.
 ## Thank You
